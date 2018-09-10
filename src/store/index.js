@@ -1,6 +1,12 @@
 
-import { createStore } from 'redux'
-import todoApp from '../reducers'
-let store = createStore(todoApp)
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-export default store
+import rootReducer from '../reducers';
+
+const store = createStore(
+    rootReducer,
+    applyMiddleware(thunk)
+);
+export default store;
+

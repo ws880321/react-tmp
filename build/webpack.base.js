@@ -6,7 +6,7 @@ module.exports = {
     // entry: {
     //     index: './src/index.js'
     // },
-    entry: ['webpack/hot/dev-server', path.resolve(__dirname, '../src/index.js')],
+    entry: ['babel-polyfill', path.resolve(__dirname, '../src/index.js')],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
